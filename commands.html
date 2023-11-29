@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head>
+        <title>Silverport Reborn</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="files/style.css">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <body>
+		<sidebar-character id="sidebar-character"></sidebar-character>
+        <main>
+			<a id="header" href ="index.html"></a>
+			<content parent="main-card">
+				<navigation>
+					<nav-top>Navigation</nav-top>
+					<a id="nav-entry" href="rules.html">Rules</a><br>
+					<a id="nav-entry" href="guide.html">Guide</a><br>
+					<a id="nav-entry" href="faq.html">FAQ</a><br>
+					<a id="nav-entry" href="commands.html">Commands</a><br>
+					<a id="nav-entry" href="wiki.html">Wiki</a><br>
+					<a id="nav-entry">Donator</a><br>
+					<a id="nav-sub" href="donator-get.html">└How to Get</a><br>
+					<a id="nav-sub" href="donator-benefits.html">└Benefits</a><br>
+					<a id="nav-sub" href="donator-commands.html">└Commands</a><br>
+				</navigation>
+				<cards>
+					<card>
+						<h1>/Tpa</h1>
+						<p id="p-indent">Sends a request to teleport to another player, as well as accept or deny incoming teleport requests. Type /tpa by itself to see other options.</p>
+						<p id="p-indent">Usage: /tpa "Name" to teleport to someone and /tpa a to accept tpa requests.</p>
+						<p id="p-indent">Example: /tpa "JohnSmith2004"</p>
+					</card>
+					<card>
+						<h1>/Home</h1>
+						<p id="p-indent">Teleports you to your claimed bed. (Make sure to claim your bed after placing it by pressing "F")</p>
+						<p id="p-indent">Usage: /home</p>
+					</card>
+					<card>
+						<h1>/Kit</h1>
+						<p id="p-indent">Gives you a certain set of items depending on the kit. A list of kits can be found by typing /kits in the chat.</p>
+						<p id="p-indent">Usage: /kit &lt;kit name&gt;</p>
+						<p id="p-indent">Example: /kit eaglefire</p>
+					</card>
+					<card>
+						<h1>/Tell</h1>
+						<p id="p-indent">Send a private message to another player. Reply to the last person with /r <message></p>
+						<p id="p-indent">Usage: /tell "Name" This is an example message.</p>
+						<p id="p-indent">Example: /tell "John the Guy" Are you at the military base?</p>
+					</card>
+					<card>
+						<h1>/Ammo</h1>
+						<p id="p-indent">Receive (at a maximum of 10) magazines/boxes for your held gun. Cannot be used on raiding weapons.</p>
+						<p id="p-indent">Usage: /ammo <number of mags> </p>
+						<p id="p-indent">Example: /ammo 10</p>
+					</card>
+					<card>
+						<h1>/Report</h1>
+						<p id="p-indent">Report a player for suspicious activity. If the rule being broken is outside chat, please take a picture/video of it and come report it to the "unturned staff" role on the <a href="https://discord.gg/NSt37K7">discord</a>.</p>
+						<p id="p-indent">Usage: /report "Name" "reason"</p>
+						<p id="p-indent">Example: /report "Cheater_2004" "Shooting through walls."</p>
+					</card>
+					<card>
+						<h1>/Garage</h1>
+						<p id="p-indent">Lists vehicles in your garage. All barricades placed on vehicles are saved. <a href="donator-benefits.html">donators</a> get additional garage space.</p>
+						<p id="p-indent">Usage: /garage</p>
+					</card>
+					<card>
+						<h1>/GarageAdd</h1>
+						<p id="p-indent">Adds the vehicle you are looking at (or inside of) to your garage.</p>
+						<p id="p-indent">Usage: /garageadd <name></p>
+						<p id="p-indent">Alias: /ga <name></p>
+						<p id="p-indent">Example: /garageadd myapc</p>
+					</card>
+					<card>
+						<h1>/GarageRetrieve</h1>
+						<p id="p-indent">Pulls a vehicle out of your garage. </p>
+						<p id="p-indent">Usage: /garageretrieve <name></p>
+						<p id="p-indent">Alias: /gr <name></p>
+						<p id="p-indent">Example: /garageretrieve myapc</p>
+					</card>
+					<card>
+						<h1>/Ally</h1>
+						<p id="p-indent">Allying a player allows you to not damage each other without being in the same group!</p>
+						<p id="p-indent">Usage: /ally <add/remove/list/cancel/accept/deny> [player name]</p>
+						<p id="p-indent">Example: /ally add BillyBob99</p>
+					</card>
+					<card>
+						<h1>/Vehicle</h1>
+						<p id="p-indent">All players are able to spawn non blacklisted vehicles (see the blacklist in <a href="faq.html">FAQ</a>)</p>
+						<p id="p-indent">Usage: /vehicle <id or name></p>
+						<p id="p-indent">Example: /vehicle otter</p>
+					</card>
+					<card>
+						<h1>/KillEffect</h1>
+						<p id="p-indent">Manage your kill effects. There are 3 different types, that can be set independently. Regular users may only use the target type, and have a very limited selection of effects. Donator and server booster get all 3 types and a much wider range of options.</p>
+						<p id="p-indent">■ Target: Occurs at the player you killed</p>
+						<p id="p-indent">■ Self: Occurs at you when you kill a player</p>
+						<p id="p-indent">■ Other: Occurs on zombies and animals</p>
+						<p id="p-indent">Usage: /killeffect</p>
+					</card>
+					<card>
+						<h1>/EasyBuild</h1>
+						<p id="p-indent">Toggles easy build mode. Easy build mode will consume items from the inventory to place structures. Place a structure like normal, if you have extra materials in your inventory and easy build mode turned on, it will consume the materials instead of the structure item. Metal structures use scrap instead of sheets.</p>
+						<p id="p-indent">Usage: /easybuild</p>
+					</card>
+					<card>
+						<h1>/Drop</h1>
+						<p id="p-indent">Drops items from your inventory based on the input filter.</p>
+						<p id="p-indent">Usage: /drop "filter"</p>
+						<p id="p-indent">Examples:</p>
+						<p id="p-indent">■ /drop 363 17 6</p>
+						<p id="p-indent">■ /drop "lynx mag" "grizzly mag"</p>
+						<p id="p-indent">■ /drop structure</p>
+					</card>
+					<card>
+						<h1>/Mark</h1>
+						<p id="p-indent">Marks the location you are looking at for a few seconds. This marker is visible to teammates and allies. By default you can press the button that corresponds to CodeHotkey3 to run the command. Adding a color sets that as your default. <a href="donator-benefits.html">Donators</a> have more options for the color.</p>
+						<p id="p-indent">Usage: /mark &lt;color&gt;</p>
+						<p id="p-indent">Example /mark blue</p>
+					</card>
+				</cards>
+			</content>
+		</main>
+        <foot>
+			<footer-text>Silveport Logo and flag designed by cynik (discord @78x)</footer-text>
+		</foot>
+		
+	</body>
+
+</html>
