@@ -10,27 +10,26 @@ html {
 }
 
 main {
-	box-shadow: 0 0 50px 10px #3962b3;
+	box-shadow: 0 0 40px 8px #676767;
 	margin: auto;
 	width: 960px;
 	height: auto;
 	border: 3px solid #676767;
 	border-radius: 1px;
-	background-color: #00a99d;
+	background-color: #008C82;
 	display: block;
 }
 
 #header {
-	background-image: url('../bg/header.png');
+	background-image: url('../layout/header.png');
 	width: 960px;
 	height: 200px;
 	display: block;
-	border-radius: 20px;
 }
 
 content {
     padding: 0px 8px 10px 8px;
-    background-color: #00a99d;
+    background-color: #008C82;
     height: 100%;
     width: 944px;
 	display: flex;
@@ -41,7 +40,7 @@ navigation {
 	float: left;
 	width: 152px;
 	border-width: 2px;
-    background-color: #acacac;
+    background-color: #9E9E9E;
     margin: 0px auto;
 	margin-bottom: 20px;
     border-radius: 1px 1px;
@@ -61,7 +60,7 @@ card{
 	width: 650px;
     padding: 0px 20px;
     border-width: 2px;
-    background-color: #acacac;
+    background-color: #9E9E9E;
     margin: 0px auto;
 	margin-left: 20px;
 	margin-bottom: 20px;
@@ -193,8 +192,11 @@ p {
 }
 
 body {
-	background-image: url('../layout/ocean.jpg');
+	background-image: url('../layout/washington.png');
 	background-color: #676767;
+	background-size: auto;
+	background-repeat: no-repeat;
+	 background-attachment: fixed;
     width: 960px;
     margin: 8px auto;
     line-height: 1.6;
