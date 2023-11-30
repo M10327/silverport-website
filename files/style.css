@@ -194,7 +194,7 @@ p {
 body {
 	background-image: url('../layout/washington.png');
 	background-color: #676767;
-	background-size: auto;
+	background-size: cover;
 	background-repeat: no-repeat;
 	 background-attachment: fixed;
     width: 960px;
