@@ -18,6 +18,7 @@ main {
 	border-radius: 1px;
 	background-color: #008C82;
 	display: block;
+	min-height: 800px;
 }
 
 #header {
@@ -47,7 +48,7 @@ navigation {
     border-style: solid;
 	border-color: #111111;
 	display: block;
-	max-height: 330px;
+	height: 370px;
 }
 
 cards {

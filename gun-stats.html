@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head>
+        <title>Silverport Reborn</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="files/style.css">
+        <link rel="stylesheet" type="text/css" href="files/gun-stats.css">
+        <link rel="shortcut icon" href="favicon.ico">
+		<script type="text/javascript" src="files/GunData.js"></script>
+		<script type="text/javascript" src="files/navigation.js"></script>
+		<script type="text/javascript" src="files/GunJson.js"></script>
+    </head>
+
+    <body>
+		<sidebar-character id="sidebar-character"></sidebar-character>
+        <main>
+			<a id="header" href ="index.html"></a>
+			<content parent="main-card">
+				<navigation id="navigation"></navigation>
+				<cards>
+					<card>
+						<div id="warning" style="left:15%; top:25% display:float; border: solid #990000 2px; margin-bottom:10px; margin-top:5px;">
+							<div style="margin:auto; color:#550000; margin-left:20px; margin-right:20px;">
+								This page is under construction, and the design is not final. Weapon stats should be accurate. Obtain locations may not be accurate.
+							</div>
+						</div>
+						<stat-divider>
+							<stat-box>
+								<stat-misc-text>Select a weapon to view its stats:</stat-misc-text><br>
+								<select id="WeaponSelector" onchange="WeaponSelectorUpdated()" style="min-width:80px;"></select><br>
+								<stat-misc-text>Comparison Weapon:</stat-misc-text><br>
+								<select id="WeaponSelectorComparison" onchange="WeaponSelectorUpdated()"></select>
+							</stat-box>
+							<stat-box>
+								<label class="container">Show unobtainable guns?
+									<input type="checkbox" id="accept" name="accept" checked="checked" onchange="UpdateCheckbox()">
+									<span class="checkmark"></span><br>
+								</label>
+								<stat-misc-text style="font-size:14px; line-height:17px; display:block;">
+									These stats are specific to Silverport only, and assume the target is wearing full spec ops.<br>
+									Horde beacons and Airdrops have the same loot.
+								</stat-misc-text>
+							</stat-box>
+						</stat-divider>
+						<stat-divider>
+							<stat-box style="margin-right: 10px;">
+								<stat-category id="itemname">itemname (id)</stat-category><br>
+								<stat-value id="itemdesc">description</stat-value>
+							</stat-box>
+							<stat-box>
+								<img id="itemicon" src="" style="max-height:120px;">
+							</stat-box>
+						</stat-divider>
+						<stat-divider>
+							<stat-box>
+								<stat-category>Basic Stats:</stat-category><br>
+								<stat-value>Firemode: </stat-value><stat-value id="itemfiremode">value</stat-value><br>
+								<stat-value>RPS: </stat-value><stat-value id="itemrps" style="text-decoration-line: underline; text-decoration-style: dotted;">value</stat-value><br>
+								<stat-value>Range: </stat-value><stat-value id="itemrange">value</stat-value><br>
+								<stat-value>Sprint ADS: </stat-value><stat-value id="itemsprint">value</stat-value><br>
+								<stat-value>Size: </stat-value><stat-value id="itemsizex">x</stat-value><stat-value>x</stat-value><stat-value id="itemsizey">y</stat-value><br>
+								<stat-value>Kept on Death: </stat-value><stat-value id="itemkept">value</stat-value><br>
+								<stat-value>Raiding: </stat-value><stat-value id="itemraid">value</stat-value><br>
+								<stat-value>Obtain At: </stat-value><stat-value id="itemobtain">value</stat-value><br>
+								<stat-category>Recoil:</stat-category><br>
+								<stat-value>Horizontal: </stat-value><stat-value id="itemminrecoilx">x</stat-value><stat-value> to </stat-value><stat-value id="itemmaxrecoilx">y</stat-value><br>
+								<stat-value>H Recovery: </stat-value><stat-value id="itemhrecovery">value</stat-value><br>
+								<stat-value>Vertical: </stat-value><stat-value id="itemminrecoily">x</stat-value><stat-value> to </stat-value><stat-value id="itemmaxrecoily">y</stat-value><br>
+								<stat-value>V Recovery: </stat-value><stat-value id="itemvrecovery">value</stat-value><br>
+							</stat-box>
+							<stat-box>
+								<stat-category>Damage Stats:</stat-category><br>
+								<stat-divider>
+									<stat-box>
+										<stat-value>Head: </stat-value><stat-value id="itemdmghead" style="text-decoration-line: underline; text-decoration-style: dotted;">value</stat-value><br>
+										<stat-value>Body: </stat-value><stat-value id="itemdmgbody" style="text-decoration-line: underline; text-decoration-style: dotted;">value</stat-value><br>
+										<stat-value>Arms: </stat-value><stat-value id="itemdmgarms" style="text-decoration-line: underline; text-decoration-style: dotted;">value</stat-value><br>
+										<stat-value>Legs: </stat-value><stat-value id="itemdmglegs" style="text-decoration-line: underline; text-decoration-style: dotted;">value</stat-value><br>
+									</stat-box>
+									<stat-box style="margin-left:10px;">
+										<stat-value>Shots to Kill: </stat-value><stat-value id="itemshotstokill">value</stat-value><br>
+										<stat-value>Time to Kill: </stat-value><stat-value id="itemttk">value</stat-value><br>
+										<stat-value title="Time to kill with an adaptive chambering equipped">TTK Adap: </stat-value><stat-value id="itemttkadaptive">value</stat-value><br>
+									</stat-box>
+								</stat-divider>
+								<stat-category>Ballistics:</stat-category><br>
+								<stat-divider>
+									<stat-box>
+										<stat-value><b>Bullet: </b></stat-value><br>
+										<stat-value>Steps: </stat-value><stat-value id="itemsteps">value</stat-value><br>
+										<stat-value>Travel: </stat-value><stat-value id="itemtravel">value</stat-value><br>
+										<stat-value>Drop: </stat-value><stat-value id="itemdrop">value</stat-value><br>
+									</stat-box>
+									<stat-box>
+										<stat-value><b>Projectile: </b></stat-value><br>
+										<stat-value>Launch Force: </stat-value><stat-value id="itemlaunchforce">value</stat-value><br>
+									</stat-box>
+								</stat-divider>
+							</stat-box>
+						</stat-divider>
+
+					</card>
+				</cards>
+			</content>
+		</main>
+        <foot>
+			<footer-text>Silveport Logo and flag designed by cynik (discord @78x)</footer-text>
+		</foot>
+		
+	</body>
+
+</html>
