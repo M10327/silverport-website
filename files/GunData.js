@@ -4,8 +4,10 @@ var ShowUnobtainable = false;
 window.addEventListener('load', LoadGunStats, false); 
 function LoadGunStats() {
 	PopulateSelector();
-	UpdateCheckbox();
 	WeaponSelectorUpdated();
+	var check = document.getElementById("accept");
+	check.checked = false;
+	UpdateCheckbox();
 };
 
 function UpdateCheckbox(){
