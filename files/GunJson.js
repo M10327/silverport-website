@@ -5947,7 +5947,7 @@ const json =
   },
   "26515": {
     "Id": 26515,
-    "Name": "Nightcore",
+    "Name": "Crimson Nightcore",
     "Description": "Event exclusive Halloween version of the Nightcore.",
     "InternalName": "Nightcore_Halloween",
     "SprintADS": true,
@@ -5988,7 +5988,7 @@ const json =
   },
   "26516": {
     "Id": 26516,
-    "Name": "Nightshift",
+    "Name": "Crimson Nightshift",
     "Description": "Event exclusive Halloween version of the Nightshift.",
     "InternalName": "Nightshift_Halloween",
     "SprintADS": false,
@@ -6029,7 +6029,7 @@ const json =
   },
   "26517": {
     "Id": 26517,
-    "Name": "Nightstalker",
+    "Name": "Crimson Nightstalker",
     "Description": "Event exclusive Halloween version of the Nightstalker.",
     "InternalName": "Nightstalker_Halloween",
     "SprintADS": true,
